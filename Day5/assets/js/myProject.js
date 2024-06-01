@@ -112,10 +112,10 @@ function submitBlog(event){
     let inputStart = document.getElementById("inputStart").value;
     let inputEnd = document.getElementById("inputEnd").value;
     let inputDescription = document.getElementById("inputDescription").value
-    var nodeJs = document.getElementById("nodeJs").checked
-    var reactJs = document.getElementById("reactJs").checked
-    var nextJs = document.getElementById("nextJs").checked
-    var typeScript = document.getElementById("typeScript").checked
+    const nodeJs = document.getElementById("nodeJs").checked
+    const reactJs = document.getElementById("reactJs").checked
+    const nextJs = document.getElementById("nextJs").checked
+    const typeScript = document.getElementById("typeScript").checked
     let inputImage = document.getElementById("inputImage").files
 
     if (inputTitle == ""){
@@ -165,10 +165,10 @@ function renderBlog() {
                     <p>durasi: ${dataBlog[index].selisih_years} Tahun, ${dataBlog[index].selisih_months} Bulan, ${dataBlog[index].selisih_days} Hari</p>
                     <p>${dataBlog[index].description}</p>
                     <div class="languages">
-                        ${dataBlog[index].nodejs ? "<img src=\"assets/img/nodejs.png\" alt=\"Node.js\"/>" : ""}
-                        ${dataBlog[index].reactjs ? "<img src=\"assets/img/developer.png\" alt=\"React\"/>" : ""}
-                        ${dataBlog[index].nextjs ? "<img src=\"assets/img/next.png\" alt='Next.js'/>" : ""}
-                        ${dataBlog[index].typescript ? "<img src=\"assets/img/typescript.png\" alt=\"TypeScript\"/>" : ""}
+                        ${dataBlog[index].nodejs ? "<img src=\"/Day5/assets/img/nodejs.png\" alt=\"Node.js\"/>" : ""}
+                        ${dataBlog[index].reactjs ? "<img src=\"/Day5/assets/img/developer.png\" alt=\"React\"/>" : ""}
+                        ${dataBlog[index].nextjs ? "<img src=\"/Day5/assets/img/next.png\" alt='Next.js'/>" : ""}
+                        ${dataBlog[index].typescript ? "<img src=\"/Day5/assets/img/typescript.png\" alt=\"TypeScript\"/>" : ""}
                     </div>
                     <div class="btn-group">
                         <button class="btn-edit">Edit</button>

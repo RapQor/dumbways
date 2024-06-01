@@ -23,6 +23,10 @@
     padding: 20px; text-align: center;
     margin-top: 150px;
     margin-bottom: 150px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .container-inner1 {
@@ -32,16 +36,19 @@
     margin: 100px 100px 100px 100px;
     border: 5px;
     align-items: start;
+    max-width: 600px;
+    flex: 1;
 }
 
 .container-inner1 h1{
     text-align: left;
-    font-size: 40px;
+    font-size: 2em;
 }
 
 .container-inner1 p{
     text-align: justify;
-    font-size: 30px;
+    font-size: 1em;
+    line-height: 1.5;
     margin: 10px 0;
 }
 
@@ -51,6 +58,7 @@
     flex-direction: row;
     gap: 20px;
     margin: 20px 0;
+    align-items: center;
 }
 
 .baris-button p{
@@ -69,10 +77,11 @@
     cursor: pointer;
     align-items: self-start;
     font-size: 23px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.btn-contact:hover {
+    background-color: #444;
 }
 
 .nav {
@@ -138,12 +147,12 @@
 
 .sosmed {
     display: flex;
-    flex-direction: ro;
     padding: 0;
     margin: 0;
     align-items: start;
     gap: 20px;
     margin: 20px 0;
+    flex-direction: row;
 }
 
 .sosmed a{
@@ -158,19 +167,32 @@
 .img-profile {
     display: flex;
     justify-content: center;
-    border-radius: 10px;
     margin-right: 100px;
     margin-top: 50px;
-    width: 350px;
-    height: 620px;
     background-color: white;
     border-radius: 20 px;
+    border: none;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    display: flex;
     flex-direction: column;
-    -webkit-border-radius: 20 px;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+-webkit-border-radius: 20 px;
     -moz-border-radius: 20 px;
     -ms-border-radius: 20 px;
     -o-border-radius: 20 px;
+    -webkit-border-radius: 20 px;
+}
+
+@media (max-width: 768px) {
+    .container-outside {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-inner1, .img-profile {
+        width: 100%;
+        max-width: none;
+    }
 }
